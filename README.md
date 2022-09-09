@@ -2,7 +2,7 @@
 
 # Math Magicians
 
-> A alculator made with React
+> A calculator made with React
 
 ## Built With
 
