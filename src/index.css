@@ -10,14 +10,15 @@ body {
     'Cantarell',
     'Fira Sans',
     'Droid Sans',
-    'Helvetica Neue', 
+    'Helvetica Neue',
     sans-serif;
 }
 
 code {
   font-family:
     source-code-pro,
-    Menlo, Monaco,
+    Menlo,
+    Monaco,
     Consolas,
     'Courier New',
     monospace;
