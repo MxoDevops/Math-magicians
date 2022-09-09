@@ -6,18 +6,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-<<<<<<< HEAD
         <p>
           Edit
           {' '}
           <code>src/App.js</code>
-          {' '}
-=======
-         <p>
-         Edit
-          <code>src/App.js</code>
->>>>>>> 59ea08ff875de6ff83284937686aa161b149fc1b
-          and save to reload.
         </p>
         <a
           className="App-link"
