@@ -11,7 +11,9 @@
 
 ## Live Demo
 
-[Live Demo Link](https://mxodevops.github.io/Kontrol-alt/)
+[Live Demo Link]
+
+Not available as yet
 
 - Live Explination of this projects https://www.loom.com/share/aaf051d940244ae0aa491d89659c47ce
 
@@ -19,7 +21,7 @@
 
 To copy this project please do the following.
 
-1. Open this project https://github.com/MxoDevops/Kontrol-alt
+1. Open this project https://github.com/MxoDevops/math-magicians
 2. Navigate to code
 3. Then click "Download ZIP" to save the code locally
 
