@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  padding: 400px;
+}
+
+.form {
+  min-height: 310px;
+  min-width: 310px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.form div {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+}
+
+.digit:hover {
+  cursor: default;
+  background-color: rgb(202, 202, 200);
+}
+
+#row {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  justify-content: end;
+  padding-right: 5px;
+  outline: none;
+  background-color: rgb(201, 201, 201);
+}
+
+.end-row {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.functionality {
+  background: rgb(231, 145, 46);
+  border: 2px solid black;
+}
+
+.functionality:hover {
+  cursor: pointer;
+  background: rgb(255, 131, 6);
+}
