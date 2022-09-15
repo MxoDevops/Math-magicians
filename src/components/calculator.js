@@ -1,38 +1,122 @@
 import React from 'react';
 import '../calculator.css';
+import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
   constructor() {
     super();
     this.MapCalculator = this.MapCalculator.bind(this);
+    this.OnClickListening = this.OnClickListening.bind(this);
+    this.state = {
+      total: '',
+      next: '',
+      operation: '',
+    };
   }
 
-  // eslint-disable-next-line class-methods-use-this
+  OnClickListening(e) {
+    const number = e.target.innerText;
+    const results = calculate(this.state, number);
+    this.setState(() => ({
+      next: results.next,
+      total: results.total,
+      operation: results.operation,
+    }));
+  }
+
   MapCalculator() {
+    const { total, next, operation } = this.state;
     return (
       <div className="form">
-        <div className="row" id="row" contentEditable>
-          0
+        <div className="row" id="row">
+          <input
+            type="text"
+            readOnly
+            placeholder="0"
+            value={(total || '') + (operation || '') + (next || '') || 0}
+          />
         </div>
-        <div className="digit">AC</div>
-        <div className="digit">+/-</div>
-        <div className="digit">%</div>
-        <div className="functionality">/</div>
-        <div className="digit">7</div>
-        <div className="digit">8</div>
-        <div className="digit">9</div>
-        <div className="functionality">x</div>
-        <div className="digit">4</div>
-        <div className="digit">5</div>
-        <div className="digit">6</div>
-        <div className="functionality">-</div>
-        <div className="digit">1</div>
-        <div className="digit">2</div>
-        <div className="digit">3</div>
-        <div className="functionality">+</div>
-        <div className="digit end-row">0</div>
-        <div className="digit">.</div>
-        <div className="functionality">=</div>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          AC
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          +/-
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          %
+        </button>
+        <button
+          type="button"
+          className="functionality"
+          onClick={this.OnClickListening}
+        >
+          ÷
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          7
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          8
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          9
+        </button>
+        <button
+          type="button"
+          className="functionality"
+          onClick={this.OnClickListening}
+        >
+          x
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          4
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          5
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          6
+        </button>
+        <button
+          type="button"
+          className="functionality"
+          onClick={this.OnClickListening}
+        >
+          -
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          1
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          2
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          3
+        </button>
+        <button
+          type="button"
+          className="functionality"
+          onClick={this.OnClickListening}
+        >
+          +
+        </button>
+        <button
+          type="button"
+          className="digit end-row"
+          onClick={this.OnClickListening}
+        >
+          0
+        </button>
+        <button type="button" className="digit" onClick={this.OnClickListening}>
+          .
+        </button>
+        <button
+          type="button"
+          className="functionality"
+          onClick={this.OnClickListening}
+        >
+          =
+        </button>
       </div>
     );
   }
@@ -41,5 +125,5 @@ class Calculator extends React.Component {
     return <this.MapCalculator />;
   }
 }
-
+Calculator.defaultProps = { total: 0, operations: '', next: 0 };
 export default Calculator;
