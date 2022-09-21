@@ -10,7 +10,7 @@ const Calculator = () => {
 
   const { total, next, operation } = num;
   return (
-    <main>
+    <main className="container calculator-container">
       <div className="form">
         <div className="row" id="row">
           <input

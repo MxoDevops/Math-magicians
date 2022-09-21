@@ -52,3 +52,16 @@ body {
   cursor: pointer;
   background: rgb(255, 131, 6);
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5vw;
+}
