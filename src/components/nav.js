@@ -20,14 +20,14 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className='nav'>
-      <div className='logo'>
+    <nav className="nav">
+      <div className="logo">
         <h1>MATH MAGICIANS</h1>
       </div>
-      <ul className='navBar'>
+      <ul className="navBar">
         {links.map((link) => (
           <li key={link.id}>
-            <Link to={link.path} activeclassname='active-link'>
+            <Link to={link.path} activeclassname="active-link">
               {link.text}
             </Link>
           </li>

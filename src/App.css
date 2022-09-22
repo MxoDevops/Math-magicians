@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  color: #444;
+  background: rgb(255, 255, 255);
+  height: 100vh;
+  background-image: url('images/pngaaa.com-2946059.png');
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: 280px 600px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.active-link {
+  border-bottom: 2px solid orange;
+}
+
+.navBar {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 0 24px;
+  min-height: 70px;
+}
+
+.navBar li a {
+  text-decoration: none;
+  color: rgb(7, 125, 141);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 10px;
+}
+
+.navBar li a:hover {
+  cursor: pointer;
+  border-bottom: 2px solid rgb(247, 109, 58);
+}
